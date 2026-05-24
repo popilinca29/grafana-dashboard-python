@@ -1,0 +1,39 @@
+# ================================
+# Core UI Automation Framework
+# ================================
+
+pytest==8.3.3
+# Test runner for executing and organizing test cases
+
+playwright==1.48.0
+# Core browser automation library (Chromium, Firefox, WebKit)
+
+pytest-playwright==0.5.2
+# Pytest plugin that integrates Playwright with pytest fixtures
+
+
+# ================================
+# Test Execution Enhancements
+# ================================
+
+pytest-xdist==3.6.1
+# Enables parallel test execution to reduce runtime
+
+pytest-rerunfailures==14.0
+# Automatically retries failed tests to handle flaky UI issues
+
+
+# ================================
+# Reporting
+# ================================
+
+allure-pytest==2.13.5
+# Generates structured test execution reports using Allure framework
+
+
+# ================================
+# Environment & Configuration
+# ================================
+
+python-dotenv==1.0.1
+# Loads environment variables from .env files for flexible configuration
