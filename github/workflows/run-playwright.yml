@@ -4,6 +4,8 @@ on:
   push:
     branches: [ main ]
   pull_request:
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   test:
@@ -25,12 +27,12 @@ jobs:
 
       - name: Install Playwright browsers
         run: |
-          playwright install --with-deps
+          python -m playwright install --with-deps
 
       - name: Run tests
         env:
           BASE_URL: ${{ vars.BASE_URL }}
-          HEADLESS: true
+          HEADLESS: "true"
         run: |
           pytest -v --html=report.html --self-contained-html
 
@@ -41,7 +43,7 @@ jobs:
           name: pytest-html-report
           path: report.html
 
-      - name: Upload test artifacts (screenshots, logs if any)
+      - name: Upload test artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
