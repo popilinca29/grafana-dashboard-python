@@ -110,3 +110,4 @@ Framework is structured for easy extension and CI integration
 
 # CI/CD
 - Project uses Github Actions - script is automatically triggered on push and PR events, as well as manual trigger (`workflow_dispatch`) where you can choose the branch you want to run it on
+- The run can also be scheduled to run nightly, but it is not necessary for this particular case
